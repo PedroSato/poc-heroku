@@ -12,4 +12,11 @@ app.get('/', (req, res) => {
     });
 });
 
+app.options('/register');
+app.post('/register', (req, res) => {
+    res.json({
+        hello: 'world'
+    });
+});
+
 app.listen(process.env.PORT || 3000);
